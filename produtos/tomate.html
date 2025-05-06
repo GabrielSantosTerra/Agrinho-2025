@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍅 Tomate Italiano - Campo&Cidade</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Campo&Cidade</h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">☰ Menu</label>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../produtos.html">Produtos</a></li>
+          <li><a href="../sobre.html">Sobre</a></li>
+          <li><a href="../contato.html">Contato</a></li>
+          <li><a href="../carrinho.html">Carrinho</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container produto-pagina">
+    <div class="produto-grid">
+      <div class="produto-imagem">
+        <div class="imagem-demo">🍅</div>
+      </div>
+      <div class="produto-info">
+        <h2>🍅 Tomate Italiano</h2>
+        <p class="preco">R$ 7,00 <span>/ kg</span></p>
+        <form action="../carrinho.html" method="get">
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" max="99" value="1" required>
+          <button type="submit">Adicionar ao Carrinho</button>
+        </form>
+        <div class="descricao">
+          <h4>Descrição</h4>
+          <p>Tomate Italiano fresca e selecionada diretamente da fazenda.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Campo&Cidade. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
