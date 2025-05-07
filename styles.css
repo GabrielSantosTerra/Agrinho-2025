@@ -1,235 +1,369 @@
 /* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Remove sublinhado de todos os links */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  line-height: 1.6;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem 0;
-}
-
-/* Header fixo */
-header {
-  background-color: #2c2c2c;
-  padding: 1rem 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-header h1 {
-  color: #87b46f;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Footer fixo */
-footer {
-  background-color: #2c2c2c;
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
-  color: #aaaaaa;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Menu padrão */
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #f0f0f0;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
-  color: #e0a96d;
-}
-
-/* Ícone do menu para mobile */
-.menu-icon {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #f0f0f0;
-}
-
-/* Esconde o checkbox */
-.menu-toggle {
-  display: none;
-}
-
-/* Hero */
-#destaque {
-  background-color: #1e1e1e;
-  text-align: center;
-  padding: 4rem 0;
-}
-
-#destaque h2 {
-  font-size: 2.5rem;
-  color: #87b46f;
-}
-
-#destaque p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #a8dadc;
-}
-
-/* Produtos */
-#produtos {
-  background-color: #2c2c2c;
-}
-
-.grid-produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-/* Cards como links clicáveis */
-.card {
-  background-color: #333;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease, background-color 0.3s;
-  cursor: pointer;
-  color: #ffffff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 150px;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  background-color: #3d3d3d;
-  color: #e0a96d;
-}
-
-/* Títulos e preços dentro dos cards */
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: inherit;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #cccccc;
-}
-
-/* Sobre */
-#sobre p {
-  max-width: 800px;
-  margin: 1rem auto;
-  font-size: 1.1rem;
-  color: #dddddd;
-}
-
-/* Contato */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-input,
-textarea {
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #2c2c2c;
-  color: #f0f0f0;
-  resize: none;
-}
-
-input:focus,
-textarea:focus {
-  outline: 2px solid #87b46f;
-}
-
-button {
-  background-color: #e0a96d;
-  color: #1e1e1e;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #f0b97d;
-}
-
-/* Menu dropdown em telas pequenas */
-@media (max-width: 768px) {
-  .menu ul {
-    display: none;
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Remove sublinhado de todos os links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    line-height: 1.6;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 0;
+  }
+  
+  /* Header fixo */
+  header {
     background-color: #2c2c2c;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
     padding: 1rem 0;
-    border-top: 1px solid #444;
-    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
-
-  .menu-toggle:checked + .menu-icon + .menu ul {
+  
+  header h1 {
+    color: #87b46f;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Footer fixo */
+  footer {
+    background-color: #2c2c2c;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Menu padrão */
+  .menu ul {
+    list-style: none;
     display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
-
+  
+  .menu a {
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #e0a96d;
+  }
+  
+  /* Ícone do menu para mobile */
   .menu-icon {
-    display: block;
-    padding: 0.5rem 1rem;
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #f0f0f0;
+  }
+  
+  /* Esconde o checkbox */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Hero */
+  #destaque {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  #destaque h2 {
+    font-size: 2.5rem;
+    color: #87b46f;
+  }
+  
+  #destaque p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #a8dadc;
+  }
+  
+  /* Produtos */
+  #produtos {
     background-color: #2c2c2c;
   }
-}
-
-/* Espaçamento extra para a seção de promoções */
-#promocoes {
-  padding-bottom: 150px;
-}
-
-main.container {
-  padding-top: 200px; /* espaço para não encostar no header */
-  padding-bottom: 200px; /* espaço para não encostar no footer */
-}
+  
+  .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Cards como links clicáveis */
+  .card {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 150px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    background-color: #3d3d3d;
+    color: #e0a96d;
+  }
+  
+  /* Títulos e preços dentro dos cards */
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: inherit;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #cccccc;
+  }
+  
+  /* Sobre */
+  #sobre p {
+    max-width: 800px;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    color: #dddddd;
+  }
+  
+  /* Contato */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  input,
+  textarea {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    resize: none;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: 2px solid #87b46f;
+  }
+  
+  button {
+    background-color: #e0a96d;
+    color: #1e1e1e;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #f0b97d;
+  }
+  
+  /* Menu dropdown em telas pequenas */
+  @media (max-width: 768px) {
+    .menu ul {
+      display: none;
+      flex-direction: column;
+      background-color: #2c2c2c;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      padding: 1rem 0;
+      border-top: 1px solid #444;
+      z-index: 999;
+    }
+  
+    .menu-toggle:checked + .menu-icon + .menu ul {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+      padding: 0.5rem 1rem;
+      background-color: #2c2c2c;
+    }
+  }
+  
+  /* Espaçamento correto do conteúdo principal */
+  main.container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  
+  /* Estilos da página de produto */
+  .produto-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .produto-imagem {
+    flex: 1 1 250px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imagem-demo {
+    font-size: 8rem;
+    padding: 2rem;
+    background-color: #2c2c2c;
+    border-radius: 1rem;
+  }
+  
+  .produto-info {
+    flex: 2 1 400px;
+  }
+  
+  .produto-info h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #87b46f;
+  }
+  
+  .preco {
+    font-size: 2rem;
+    color: #e0a96d;
+    margin: 1rem 0;
+  }
+  
+  .preco span {
+    font-size: 1rem;
+    color: #cccccc;
+  }
+  
+  .produto-info form {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .produto-info form input {
+    width: 70px;
+    text-align: center;
+  }
+  
+  .descricao h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #dddddd;
+  }
+  
+  .descricao p {
+    color: #cccccc;
+  }
+  
+  @media (max-width: 768px) {
+    .produto-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imagem-demo {
+      font-size: 6rem;
+    }
+  
+    .produto-info {
+      text-align: center;
+    }
+  
+    .produto-info form {
+      justify-content: center;
+    }
+  }
+  
+  .carrinho {
+    margin-top: 2rem;
+  }
+  
+  .carrinho table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .carrinho th, .carrinho td {
+    border-bottom: 1px solid #444;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  .carrinho th {
+    background-color: #2c2c2c;
+    color: #e0a96d;
+  }
+  
+  .carrinho td {
+    color: #dddddd;
+  }
+  
+  .total-carrinho {
+    text-align: right;
+    font-size: 1.5rem;
+    color: #87b46f;
+    margin-bottom: 2rem;
+  }
+  
+  .botoes-carrinho {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+  
+  .botoes-carrinho button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0a96d;
+    color: #1e1e1e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .botoes-carrinho button:hover {
+    background-color: #f0b97d;
+  }
+  

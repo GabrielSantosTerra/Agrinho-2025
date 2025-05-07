@@ -7,41 +7,68 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <h1>Campo&Cidade</h1>
+  <header>
+    <div class="container">
+      <h1>Campo&Cidade</h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">☰ Menu</label>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="carrinho.html">Carrinho</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">☰ Menu</label>
+  <main class="container">
+    <h2>🛒 Carrinho de Compras</h2>
 
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="carrinho">
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🍓 Morangos Orgânicos</td>
+            <td>2</td>
+            <td>R$ 10,00</td>
+            <td>R$ 20,00</td>
+          </tr>
+          <tr>
+            <td>🥛 Leite Fresco</td>
+            <td>1</td>
+            <td>R$ 5,00</td>
+            <td>R$ 5,00</td>
+          </tr>
+        </tbody>
+      </table>
 
-<main class="container">
-  <h2>🛒 Carrinho de Compras</h2>
-  
-  <ul>
-    <li>🍓 Morangos Orgânicos – 2 unidades – R$ 20,00</li>
-    <li>🥛 Leite Fresco – 1 unidade – R$ 5,00</li>
-  </ul>
+      <div class="total-carrinho">
+        <p><strong>Total:</strong> R$ 25,00</p>
+      </div>
 
-  <p><strong>Total:</strong> R$ 25,00</p>
+      <div class="botoes-carrinho">
+        <button>Finalizar Compra</button>
+        <button>Continuar Comprando</button>
+      </div>
+    </div>
 
-  <p><em>Essa é uma simulação estática de carrinho em HTML e CSS.</em></p>
-</main>
+  </main>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 Campo&Cidade. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Campo&Cidade. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>
